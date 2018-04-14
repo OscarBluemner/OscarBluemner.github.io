@@ -66,6 +66,66 @@ resumeautorotation(forcehotspot);
 
 
 
+<action name="setViewLittlePlanet">
+	set(sceneisfull360, false);
+	if(scene[get(xml.scene)].full360,
+		sub(viewhfov, panoview.hmax, panoview.hmin);
+		if (viewhfov == 360,
+			sub(viewvfov, panoview.vmax, panoview.vmin);
+			if (viewvfov == 180,
+				set(sceneisfull360, true);
+			);
+		);
+	);
+	if (sceneisfull360 AND (device.webgl OR device.flash),
+		if(normalViewActivated,stopSetViewTweens(););
+		if(current_view_isflat === true,
+			setViewNonFlat(VFOV);
+		);
+		setViewLittlePlanetComplete();
+	);
+</action>
+
+<action name="setViewLittlePlanetComplete">
+	set(backtonormalfirst,false);
+	if(view.pannini GE 1.0, set(backtonormalfirst,true));
+	if(view.stereographic == false, set(backtonormalfirst,true));
+	if(backtonormalfirst, hideTooltip();tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeOutQuad, WAIT); );
+	set(view.stereographic, true);
+	set(view.fisheyefovlink, 1.5);
+	tween(view.architectural, 0.0, 0.25);
+	tween(view.vlookat, 90, distance(179, 1.50));
+	tween(view.pannini, 0.0, distance(1.0, 0.75), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	if(panoview.fovmax LE 150, set(view.fovmax, 150); , set(view.fovmax, get(panoview.fovmax)); );
+	tween(view.fisheye, 1.0, distance(1.0, 0.75));
+	tween(view.fov, 150, distance(179, 0.75));
+</action>
+
+<action name="setViewArchitectural">
+	if(normalViewActivated,stopSetViewTweens(););
+	if(current_view_isflat === true,
+		setViewNonFlat(VFOV);
+	);
+	setViewArchitecturalComplete();
+</action>
+
+<action name="setViewArchitecturalComplete">
+	set(view.fovmax, get(panoview.fovmax));
+	set(view.fisheyefovlink, 0.5);
+	tween(view.architectural, 1.0, distance(1.0, 0.45));
+	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	tween(view.fisheye, 0.0, distance(1.0, 0.45), easeOutQuad, 
+		set(view.stereographic,false);
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	);
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+</action>
+
+  <!-- Hide / Show Controls -->
+  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
+  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
+
+
 <action name="viewControlMoveUp">
 	if(%1,
 		if(%2,
@@ -166,35 +226,6 @@ resumeautorotation(forcehotspot);
 	set(vlookat_moveforce, 0);
 </action>
 
-<action name="setViewNormal">
-	stopSetViewTweens();
-	if(current_view_isflat === true,
-		setViewNonFlat(VFOV);
-	);
-	setViewNormalComplete();
-</action>
-
-<action name="setViewNormalComplete">
-	set(view.fisheyefovlink, 0.5);
-	set(view.fovmax, get(panoview.fovmax));
-	tween(view.architectural, 0.0, distance(1.0, 0.45));
-	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
-	tween(view.vlookat, get(panoview.v), distance(90, 0.45));
-	tween(view.fov, get(panoview.fov), distance(50, 0.45));
-	tween(view.fisheye, 0.0, distance(1.0, 0.45),
-		set(view.stereographic,false);
-	);
-</action>
-
-<krpano normalViewActivated="true" />
-<action name="stopSetViewTweens">
-	stoptween(view.fov);
-	stoptween(view.vlookat);
-	stoptween(view.fisheye);
-	stoptween(view.architectural);
-	stoptween(view.pannini);
-</action>
-
 <action name="viewControlZoomIn">
 	if(%1,
 		if(%2,
@@ -235,38 +266,17 @@ resumeautorotation(forcehotspot);
 	set(fov_moveforce, 0);
 </action>
 
-<action name="setViewFisheye">
-	set(sceneisfull360, false);
-	if(scene[get(xml.scene)].full360,
-		sub(viewhfov, panoview.hmax, panoview.hmin);
-		if (viewhfov == 360,
-			sub(viewvfov, panoview.vmax, panoview.vmin);
-			if (viewvfov == 180,
-				set(sceneisfull360, true);
-			);
-		);
-	);
-	if (sceneisfull360 AND (device.webgl OR device.flash),
-		if(normalViewActivated,stopSetViewTweens(););
-		if(current_view_isflat === true,
-			setViewNonFlat(VFOV);
-		);
-		setViewFisheyeComplete();
-	);
-</action>
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
 
-<action name="setViewFisheyeComplete">
-	set(view.fisheyefovlink, 1.5);
-	set(view.fovmax, get(panoview.fovmax));
-	tween(view.architectural, 0.0, distance(1.0, 0.30));
-	tween(view.fisheye, 0.0, distance(1.0, 0.30), easeOutQuad,
-		set(view.stereographic,false);
-		tween(view.fisheye, 0.45, distance(1.0, 0.75));
-		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
-	);
-	tween(view.pannini, 0.0, distance(1.0, 0.75), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
-	tween(view.fov, get(panoview.fov), distance(50, 0.45));
-</action>
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
 
   <action name="displayImage">
     if (layer[displayedStandardImage],
@@ -445,7 +455,7 @@ resumeautorotation(forcehotspot);
   </action>
 
 
-<action name="setViewLittlePlanet">
+<action name="setViewFisheye">
 	set(sceneisfull360, false);
 	if(scene[get(xml.scene)].full360,
 		sub(viewhfov, panoview.hmax, panoview.hmin);
@@ -461,43 +471,50 @@ resumeautorotation(forcehotspot);
 		if(current_view_isflat === true,
 			setViewNonFlat(VFOV);
 		);
-		setViewLittlePlanetComplete();
+		setViewFisheyeComplete();
 	);
 </action>
 
-<action name="setViewLittlePlanetComplete">
-	set(backtonormalfirst,false);
-	if(view.pannini GE 1.0, set(backtonormalfirst,true));
-	if(view.stereographic == false, set(backtonormalfirst,true));
-	if(backtonormalfirst, hideTooltip();tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeOutQuad, WAIT); );
-	set(view.stereographic, true);
+<action name="setViewFisheyeComplete">
 	set(view.fisheyefovlink, 1.5);
-	tween(view.architectural, 0.0, 0.25);
-	tween(view.vlookat, 90, distance(179, 1.50));
+	set(view.fovmax, get(panoview.fovmax));
+	tween(view.architectural, 0.0, distance(1.0, 0.30));
+	tween(view.fisheye, 0.0, distance(1.0, 0.30), easeOutQuad,
+		set(view.stereographic,false);
+		tween(view.fisheye, 0.45, distance(1.0, 0.75));
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	);
 	tween(view.pannini, 0.0, distance(1.0, 0.75), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
-	if(panoview.fovmax LE 150, set(view.fovmax, 150); , set(view.fovmax, get(panoview.fovmax)); );
-	tween(view.fisheye, 1.0, distance(1.0, 0.75));
-	tween(view.fov, 150, distance(179, 0.75));
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
 </action>
 
-<action name="setViewArchitectural">
-	if(normalViewActivated,stopSetViewTweens(););
+<action name="setViewNormal">
+	stopSetViewTweens();
 	if(current_view_isflat === true,
 		setViewNonFlat(VFOV);
 	);
-	setViewArchitecturalComplete();
+	setViewNormalComplete();
 </action>
 
-<action name="setViewArchitecturalComplete">
-	set(view.fovmax, get(panoview.fovmax));
+<action name="setViewNormalComplete">
 	set(view.fisheyefovlink, 0.5);
-	tween(view.architectural, 1.0, distance(1.0, 0.45));
+	set(view.fovmax, get(panoview.fovmax));
+	tween(view.architectural, 0.0, distance(1.0, 0.45));
 	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
-	tween(view.fisheye, 0.0, distance(1.0, 0.45), easeOutQuad, 
-		set(view.stereographic,false);
-		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
-	);
+	tween(view.vlookat, get(panoview.v), distance(90, 0.45));
 	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+	tween(view.fisheye, 0.0, distance(1.0, 0.45),
+		set(view.stereographic,false);
+	);
+</action>
+
+<krpano normalViewActivated="true" />
+<action name="stopSetViewTweens">
+	stoptween(view.fov);
+	stoptween(view.vlookat);
+	stoptween(view.fisheye);
+	stoptween(view.architectural);
+	stoptween(view.pannini);
 </action>
 
   <action name="enableGyroscope">
@@ -507,22 +524,5 @@ resumeautorotation(forcehotspot);
     changeGyroscopeState(false);
   </action>
 
-
-  <!-- Hide / Show Controls -->
-  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
-  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
-
-
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
 
 </krpano>
