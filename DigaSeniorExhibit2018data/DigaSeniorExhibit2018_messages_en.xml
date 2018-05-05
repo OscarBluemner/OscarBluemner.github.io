@@ -9,82 +9,91 @@
 
 
 
-  <data name="en_pano22_title"><![CDATA[Photo May 01, 11 13 31 AM]]></data>
-  <data name="en_spotpoint90_tooltip"><![CDATA[Photo May 01, 11 15 00 AM]]></data>
+  <data name="en_pano22_title"><![CDATA[Reception]]></data>
+  <data name="en_spotpoint90_tooltip"><![CDATA[Reception2]]></data>
+  <data name="en_spotpoint201openurlwebsiteurl"><![CDATA[http://kaitforsythe.atavist.com/dirtylaundry]]></data>
+  <data name="en_spotpoint202openurlwebsiteurl"><![CDATA[http://kittygeoghan.wixsite.com/portfolio]]></data>
 
 
-  <data name="en_pano24_title"><![CDATA[Photo May 01, 11 15 00 AM]]></data>
-  <data name="en_spotpoint92_tooltip"><![CDATA[Photo May 01, 11 13 31 AM]]></data>
-  <data name="en_spotpoint94_tooltip"><![CDATA[Photo May 01, 11 17 14 AM]]></data>
+  <data name="en_pano24_title"><![CDATA[Reception2]]></data>
+  <data name="en_spotpoint92_tooltip"><![CDATA[Reception]]></data>
+  <data name="en_spotpoint94_tooltip"><![CDATA[Main Hall]]></data>
 
 
-  <data name="en_pano26_title"><![CDATA[Photo May 01, 11 17 14 AM]]></data>
-  <data name="en_spotpoint96_tooltip"><![CDATA[Photo May 01, 11 15 00 AM]]></data>
-  <data name="en_spotpoint97_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-  <data name="en_spotpoint99_tooltip"><![CDATA[Photo May 01, 11 19 20 AM]]></data>
+  <data name="en_pano26_title"><![CDATA[Main Hall]]></data>
+  <data name="en_spotpoint96_tooltip"><![CDATA[Reception2]]></data>
+  <data name="en_spotpoint97_tooltip"><![CDATA[Gallery Center]]></data>
+  <data name="en_spotpoint99_tooltip"><![CDATA[Back Hall]]></data>
+  <data name="en_spotpoint206openurlwebsiteurl"><![CDATA[https://soundcloud.com/user-416811808/sets/mope]]></data>
+  <data name="en_spotpoint249openurlwebsiteurl"><![CDATA[https://youtu.be/geVDGSnC3fo]]></data>
 
 
-  <data name="en_pano30_title"><![CDATA[Photo May 01, 11 19 20 AM]]></data>
-  <data name="en_spotpoint100_tooltip"><![CDATA[Photo May 01, 11 19 48 AM]]></data>
-  <data name="en_spotpoint103_tooltip"><![CDATA[Photo May 01, 11 17 14 AM]]></data>
+  <data name="en_pano30_title"><![CDATA[Back Hall]]></data>
+  <data name="en_spotpoint100_tooltip"><![CDATA[Back Hall2]]></data>
+  <data name="en_spotpoint103_tooltip"><![CDATA[Main Hall]]></data>
 
 
-  <data name="en_pano31_title"><![CDATA[Photo May 01, 11 19 48 AM]]></data>
-  <data name="en_spotpoint101_tooltip"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
-  <data name="en_spotpoint102_tooltip"><![CDATA[Photo May 01, 11 19 20 AM]]></data>
+  <data name="en_pano31_title"><![CDATA[Back Hall2]]></data>
+  <data name="en_spotpoint101_tooltip"><![CDATA[Gallery Back Right]]></data>
+  <data name="en_spotpoint102_tooltip"><![CDATA[Back Hall]]></data>
 
 
-  <data name="en_pano32_title"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
-  <data name="en_spotpoint122_tooltip"><![CDATA[Photo May 01, 11 19 48 AM]]></data>
-  <data name="en_spotpoint123_tooltip"><![CDATA[Photo May 01, 11 27 08 AM]]></data>
-  <data name="en_spotpoint124_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-  <data name="en_spotpoint125_tooltip"><![CDATA[Photo May 01, 11 20 52 AM]]></data>
+  <data name="en_pano32_title"><![CDATA[Gallery Back Right]]></data>
+  <data name="en_spotpoint122_tooltip"><![CDATA[Back Hall2]]></data>
+  <data name="en_spotpoint123_tooltip"><![CDATA[Gallery Back]]></data>
+  <data name="en_spotpoint124_tooltip"><![CDATA[Gallery Center]]></data>
+  <data name="en_spotpoint125_tooltip"><![CDATA[Gallery Right]]></data>
 
 
-  <data name="en_pano33_title"><![CDATA[Photo May 01, 11 20 52 AM]]></data>
-  <data name="en_spotpoint127_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-  <data name="en_spotpoint128_tooltip"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
-  <data name="en_spotpoint129_tooltip"><![CDATA[Photo May 01, 11 21 58 AM]]></data>
+  <data name="en_pano33_title"><![CDATA[Gallery Right]]></data>
+  <data name="en_spotpoint127_tooltip"><![CDATA[Gallery Center]]></data>
+  <data name="en_spotpoint128_tooltip"><![CDATA[Gallery Back Right]]></data>
+  <data name="en_spotpoint129_tooltip"><![CDATA[Gallery Left]]></data>
+  <data name="en_spotpoint198openurlwebsiteurl"><![CDATA[http://Smackjeeves.theworse.com]]></data>
+  <data name="en_spotpoint203openurlwebsiteurl"><![CDATA[https://www.cosmic-collective.com/]]></data>
 
 
-  <data name="en_pano35_title"><![CDATA[Photo May 01, 11 21 58 AM]]></data>
-  <data name="en_spotpoint104_tooltip"><![CDATA[Photo May 01, 11 22 29 AM]]></data>
-  <data name="en_spotpoint105_tooltip"><![CDATA[Photo May 01, 11 20 52 AM]]></data>
-  <data name="en_spotpoint106_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
+  <data name="en_pano35_title"><![CDATA[Gallery Left]]></data>
+  <data name="en_spotpoint104_tooltip"><![CDATA[Gallery Back Left]]></data>
+  <data name="en_spotpoint105_tooltip"><![CDATA[Gallery Right]]></data>
+  <data name="en_spotpoint106_tooltip"><![CDATA[Gallery Center]]></data>
 
 
-  <data name="en_pano36_title"><![CDATA[Photo May 01, 11 22 29 AM]]></data>
-  <data name="en_spotpoint108_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-  <data name="en_spotpoint109_tooltip"><![CDATA[Photo May 01, 11 21 58 AM]]></data>
-  <data name="en_spotpoint110_tooltip"><![CDATA[Photo May 01, 11 27 08 AM]]></data>
+  <data name="en_pano36_title"><![CDATA[Gallery Back Left]]></data>
+  <data name="en_spotpoint108_tooltip"><![CDATA[Gallery Center]]></data>
+  <data name="en_spotpoint109_tooltip"><![CDATA[Gallery Left]]></data>
+  <data name="en_spotpoint110_tooltip"><![CDATA[Gallery Back]]></data>
+  <data name="en_spotpoint204openurlwebsiteurl"><![CDATA[https://vimeo.com/263596429]]></data>
+  <data name="en_spotpoint205openurlwebsiteurl"><![CDATA[https://www.youtube.com/watch?v=y36ERpEvXKA]]></data>
 
 
-  <data name="en_pano40_title"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-  <data name="en_spotpoint112_tooltip"><![CDATA[Photo May 01, 11 27 08 AM]]></data>
-  <data name="en_spotpoint114_tooltip"><![CDATA[Photo May 01, 11 17 14 AM]]></data>
-  <data name="en_spotpoint115_tooltip"><![CDATA[Photo May 01, 11 20 52 AM]]></data>
-  <data name="en_spotpoint116_tooltip"><![CDATA[Photo May 01, 11 22 29 AM]]></data>
-  <data name="en_spotpoint117_tooltip"><![CDATA[Photo May 01, 11 21 58 AM]]></data>
-  <data name="en_spotpoint118_tooltip"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
+  <data name="en_pano40_title"><![CDATA[Gallery Center]]></data>
+  <data name="en_spotpoint112_tooltip"><![CDATA[Gallery Back]]></data>
+  <data name="en_spotpoint114_tooltip"><![CDATA[Main Hall]]></data>
+  <data name="en_spotpoint115_tooltip"><![CDATA[Gallery Right]]></data>
+  <data name="en_spotpoint116_tooltip"><![CDATA[Gallery Back Left]]></data>
+  <data name="en_spotpoint117_tooltip"><![CDATA[Gallery Left]]></data>
+  <data name="en_spotpoint118_tooltip"><![CDATA[Gallery Back Right]]></data>
+  <data name="en_spotpoint199openurlwebsiteurl"><![CDATA[http://Smackjeeves.theworse.com]]></data>
 
 
-  <data name="en_pano42_title"><![CDATA[Photo May 01, 11 27 08 AM]]></data>
-  <data name="en_spotpoint119_tooltip"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
-  <data name="en_spotpoint120_tooltip"><![CDATA[Photo May 01, 11 22 29 AM]]></data>
-  <data name="en_spotpoint121_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
+  <data name="en_pano42_title"><![CDATA[Gallery Back]]></data>
+  <data name="en_spotpoint119_tooltip"><![CDATA[Gallery Back Right]]></data>
+  <data name="en_spotpoint120_tooltip"><![CDATA[Gallery Back Left]]></data>
+  <data name="en_spotpoint121_tooltip"><![CDATA[Gallery Center]]></data>
 
 
-	<data name="en_spotmap67_tooltip"><![CDATA[Photo May 01, 11 13 31 AM]]></data>
-	<data name="en_spotmap69_tooltip"><![CDATA[Photo May 01, 11 15 00 AM]]></data>
-	<data name="en_spotmap71_tooltip"><![CDATA[Photo May 01, 11 17 14 AM]]></data>
-	<data name="en_spotmap75_tooltip"><![CDATA[Photo May 01, 11 19 20 AM]]></data>
-	<data name="en_spotmap76_tooltip"><![CDATA[Photo May 01, 11 19 48 AM]]></data>
-	<data name="en_spotmap77_tooltip"><![CDATA[Photo May 01, 11 20 21 AM]]></data>
-	<data name="en_spotmap78_tooltip"><![CDATA[Photo May 01, 11 20 52 AM]]></data>
-	<data name="en_spotmap80_tooltip"><![CDATA[Photo May 01, 11 21 58 AM]]></data>
-	<data name="en_spotmap81_tooltip"><![CDATA[Photo May 01, 11 22 29 AM]]></data>
-	<data name="en_spotmap85_tooltip"><![CDATA[Photo May 01, 11 26 03 AM]]></data>
-	<data name="en_spotmap87_tooltip"><![CDATA[Photo May 01, 11 27 08 AM]]></data>
+	<data name="en_spotmap187_tooltip"><![CDATA[Reception]]></data>
+	<data name="en_spotmap188_tooltip"><![CDATA[Reception2]]></data>
+	<data name="en_spotmap189_tooltip"><![CDATA[Main Hall]]></data>
+	<data name="en_spotmap190_tooltip"><![CDATA[Back Hall]]></data>
+	<data name="en_spotmap191_tooltip"><![CDATA[Back Hall2]]></data>
+	<data name="en_spotmap192_tooltip"><![CDATA[Gallery Back Right]]></data>
+	<data name="en_spotmap193_tooltip"><![CDATA[Gallery Right]]></data>
+	<data name="en_spotmap194_tooltip"><![CDATA[Gallery Left]]></data>
+	<data name="en_spotmap196_tooltip"><![CDATA[Gallery Center]]></data>
+	<data name="en_spotmap197_tooltip"><![CDATA[Gallery Back]]></data>
+	<data name="en_spotmap223_tooltip"><![CDATA[Gallery Back Left]]></data>
 
 
 
